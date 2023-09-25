@@ -84,8 +84,10 @@ h6 {
 /*GLOBAL STYLING*/
 
 body {
-  background-image: url("/spaceTourism/starter-code/assets/home/background-home-mobile.jpg");
+  background-image: url("/starter-code/assets/home/background-home-mobile.jpg");
   margin: 24px;
+  color: var(--color-light);
+  font-family: 'Bellefair', serif;
 }
 
 /* NAV STYLING */
@@ -93,11 +95,20 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
-nav img {
+.nav__logo {
   width: 40px;
   max-height: 40px;
+}
+
+.nav__burger {
+  position: absolute;
+  height: 21px;
+  width: 24px;
+  right: 0;
+  top: 9px;
 }
 
 .nav__links {
@@ -107,4 +118,50 @@ nav img {
 
 .nav__link {
   text-decoration: none;
+  display: none;
+}
+
+/* HOME STYLES */
+
+.home__wrapper {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.home__title {
+  text-transform: uppercase;
+  font-size: var(--heading-l);
+}
+
+.home__eyebrow {
+  text-transform: uppercase;
+  font-size: var(--subheading-r);
+}
+
+.home__text {
+  font-size: 1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  color: var(--color-accent);
+}
+
+
+
+.home__explore {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.home__explore_btn {
+  color: var(--color-dark);
+  display: block;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
 }
