@@ -96,7 +96,7 @@ h6 {
 }
 
 body {
-	background-image: url("/starter-code/assets/home/background-home-mobile.jpg");
+	background-image: url("/starter-code/assets/home/background-home-tablet.jpg");
 	width: calc(100% - 48px);
 	margin: 24px;
 	color: var(--color-light);
@@ -130,6 +130,7 @@ nav {
 	text-transform: uppercase;
 	font-size: var(--nav-l);
 	font-family: "Barlow Condensed", sans-serif;
+	margin-inline-end: 0.75em;
 }
 
 /* .nav__burger {
@@ -151,7 +152,11 @@ nav {
 }
 
 @media (max-width: 35em) {
-	.nav__links {
+	body
+		{
+		background-image: url("/starter-code/assets/home/background-home-mobile.jpg");
+}
+		.nav__links {
 		position: fixed;
 		inset: 0 0 0 30%;
 		background: hsl(0 0 100% / 0.1);
