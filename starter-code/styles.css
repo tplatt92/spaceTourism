@@ -1,21 +1,21 @@
 :root {
-  --color-dark: #0b0d17;
-  --color-light: #ffffff;
-  --color-accent: #d0d6f9;
+	--color-dark: #0b0d17;
+	--color-light: #ffffff;
+	--color-accent: #d0d6f9;
 
-  --heading-xl: 9.375rem;
-  --heading-l: 6.25rem;
-  --heading-m: 3.5rem;
-  --heading-s: 2rem;
-  --heading-xs: 1.75rem;
-  --heading-xs-spacing: 4.75;
+	--heading-xl: 9.375rem;
+	--heading-l: 6.25rem;
+	--heading-m: 3.5rem;
+	--heading-s: 2rem;
+	--heading-xs: 1.75rem;
+	--heading-xs-spacing: 4.75;
 
-  --subheading-l: 1.75rem;
-  --subheading-r: 0.875rem;
-  --subheading-spacing: 2.35;
+	--subheading-l: 1.75rem;
+	--subheading-r: 0.875rem;
+	--subheading-spacing: 2.35;
 
-  --nav-r: 1rem;
-  --nav-spacing: 2.7;
+	--nav-r: 1rem;
+	--nav-spacing: 2.7;
 }
 
 /*
@@ -24,13 +24,13 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 /*
     2. Remove default margin
   */
 * {
-  margin: 0;
+	margin: 0;
 }
 /*
     Typographic tweaks!
@@ -38,8 +38,8 @@
     4. Improve text rendering
   */
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
 }
 /*
     5. Improve media defaults
@@ -49,8 +49,8 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 /*
     6. Remove built-in form typography styles
@@ -59,7 +59,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 /*
     7. Avoid text overflows
@@ -71,97 +71,159 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+	overflow-wrap: break-word;
 }
 /*
     8. Create a root stacking context
   */
 #root,
 #__next {
-  isolation: isolate;
+	isolation: isolate;
 }
 
 /*GLOBAL STYLING*/
 
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
 body {
-  background-image: url("/starter-code/assets/home/background-home-mobile.jpg");
-  margin: 24px;
-  color: var(--color-light);
-  font-family: 'Bellefair', serif;
+	background-image: url("/starter-code/assets/home/background-home-mobile.jpg");
+	width: calc(100% - 48px);
+	margin: 24px;
+	color: var(--color-light);
+	font-family: "Bellefair", serif;
+	overflow-x: hidden;
 }
 
 /* NAV STYLING */
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
 }
 
 .nav__logo {
-  width: 40px;
-  max-height: 40px;
-}
-
-.nav__burger {
-  position: absolute;
-  height: 21px;
-  width: 24px;
-  right: 0;
-  top: 9px;
+	width: 40px;
+	max-height: 40px;
 }
 
 .nav__links {
-  list-style: none;
-  display: flex;
+	list-style: none;
+	display: flex;
 }
 
 .nav__link {
-  text-decoration: none;
-  display: none;
+	font-family: --;
+	text-decoration: none;
+	color: var(--color-light);
+	letter-spacing: var(--nav-spacing);
+	text-transform: uppercase;
+	font-size: var(--nav-l);
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+/* .nav__burger {
+	position: absolute;
+	height: 21px;
+	width: 24px;
+	right: 0;
+	top: 9px;
+	z-index: 9999;
+} */
+
+.nav__link span {
+	font-weight: 700;
+	margin-inline-end: 0.75em;
+}
+
+.mobile__nav__toggle {
+	display: none;
+}
+
+@media (max-width: 35em) {
+	.nav__links {
+		position: fixed;
+		inset: 0 0 0 30%;
+		background: hsl(0 0 100% / 0.1);
+		backdrop-filter: blur(2rem);
+		flex-direction: column;
+		padding: min(20vh, 10rem) 2em;
+		gap: 2em;
+		z-index: 1000;
+		transform: translateX(100%);
+		transition: transform 350ms ease-out;
+	}
+	.nav__links[data-visible="true"] {
+		transform: translateX(0%);
+	}
+	.mobile__nav__toggle {
+		display: block;
+		position: absolute;
+		border: 0;
+		height: 21px;
+		width: 24px;
+		right: 0;
+		top: 9px;
+		z-index: 9999;
+		background-image: url("/starter-code/assets/shared/icon-hamburger.svg");
+		background-repeat: no-repeat;
+		background-color: transparent;
+	}
+
+	.mobile__nav__toggle[aria-expanded="true"] {
+		background-image: url("/starter-code/assets/shared/icon-close.svg");
+	}
 }
 
 /* HOME STYLES */
 
 .home__wrapper {
-  padding-top: 50px;
-  text-align: center;
+	padding-top: 50px;
+	text-align: center;
 }
 
 .home__title {
-  text-transform: uppercase;
-  font-size: var(--heading-l);
+	text-transform: uppercase;
+	font-size: var(--heading-l);
 }
 
 .home__eyebrow {
-  text-transform: uppercase;
-  font-size: var(--subheading-r);
+	text-transform: uppercase;
+	font-size: var(--subheading-r);
 }
 
 .home__text {
-  font-size: 1rem;
-  font-family: 'Barlow Condensed', sans-serif;
-  color: var(--color-accent);
+	font-size: 1rem;
+	font-family: "Barlow Condensed", sans-serif;
+	color: var(--color-accent);
 }
 
-
-
 .home__explore {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  background-color: var(--color-light);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  margin-top: 5rem;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	background-color: var(--color-light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	margin-top: 5rem;
 }
 
 .home__explore_btn {
-  color: var(--color-dark);
-  display: block;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 1.25px;
+	color: var(--color-dark);
+	display: block;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	letter-spacing: 1.25px;
 }
