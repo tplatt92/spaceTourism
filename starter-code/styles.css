@@ -133,6 +133,7 @@ nav {
 .nav__logo {
 	width: 40px;
 	max-height: 40px;
+	
 }
 
 .nav__links {
@@ -371,6 +372,7 @@ nav {
 
 	.home__explore_btn {
 		cursor: pointer;
+		text-decoration: none;
 	}
 
 	main {
