@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="crew.styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Space Tourism</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav__wrapper">
+        <nav>
+          <a href="/starter-code/index.html">
+            <img
+              src="/starter-code/assets/shared/logo.svg"
+              class="nav__logo"
+              alt=""
+            />
+          </a>
+          <button
+            type="button"
+            aria-controls="primary_navigation"
+            aria-expanded="false"
+            class="mobile__nav__toggle"
+          >
+            <span class="sr-only">menu</span>
+          </button>
+
+          <ul class="nav__links" data-visible="false" id="primary_navigation">
+            <li>
+              <a class="nav__link" href="index.html"
+                ><span aria-hidden="true">00</span> Home</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="destination.html"
+                ><span aria-hidden="true">01</span> Destination</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="/"
+                ><span aria-hidden="true">02</span> Crew</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="/"
+                ><span aria-hidden="true">03</span> Technology</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main>
+      <section class="crew__wrapper">
+        <div class="crew_container" id="commander">
+          <h2 class="crew__subheading">Meet your crew</h2>
+          <div class="crew__info__wrapper">
+            <h2 class="crew__eyebrow">Commander</h2>
+            <h1 class="crew__title">Douglas Hurley</h1>
+            <p class="crew__info_text">
+              Douglas Gerald Hurley is an American engineer, former Marine Corps
+              pilot and former NASA astronaut. He launched into space for the
+              third time as commander of Crew Dragon Demo-2.
+            </p>
+          </div>
+          <div class="carousel__dots">
+            <div class="active_dot dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="crew__photo__wrapper">
+            <!-- <h2 class="home__eyebrow">
+							<span aria-hidden="true" class="home__eyebrow__num">01</span> Pick
+							your destination
+						</h2> -->
+            <img
+              src="./assets/crew/image-douglas-hurley.png"
+              alt="Picture of Douglas Hurley"
+              class="crew__photo"
+            />
+          </div>
+        </div>
+
+        <!-- <img
+					class="home__logo"
+					src="/starter-code/assets/shared/earth-icon.png"
+					alt=""
+				/> -->
+        <div class="arrow"></div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="nav.js"></script>
+    <script src="destination.js"></script>
+    <script src="smooth_scroll.js"></script>
+  </body>
+</html>

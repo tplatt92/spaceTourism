@@ -1,0 +1,593 @@
+:root {
+  --color-dark: #0b0d17;
+  --color-light: #ffffff;
+  --color-accent: #d0d6f9;
+
+  --heading-xl: 9.375rem;
+  --heading-l: 6.25rem;
+  --heading-m: 3.5rem;
+  --heading-s: 2rem;
+  --heading-xs: 1.75rem;
+  --heading-xs-spacing: 4.75px;
+
+  --subheading-l: 1.75rem;
+  --subheading-r: 0.875rem;
+  --subheading-spacing: 2.35;
+
+  --nav-r: 1rem;
+  --nav-spacing: 2.7;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*GLOBAL STYLING*/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  background-image: url("/starter-code/assets/crew/background-crew-desktop.jpg");
+  /* background-repeat: no-repeat; */
+  background-color: #0b0d16;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 100vh;
+  color: var(--color-light);
+  font-family: "Bellefair", serif;
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+}
+
+.crew_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /*background-image: url("/starter-code/assets/destination/background-destination-tablet.jpg");*/
+}
+@media (max-width: 64em) {
+  body {
+    background-image: url("/starter-code/assets/crew/background-crew-tablet.jpg");
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 34.99em) {
+  body {
+    background-image: url("/starter-code/assets/crew/background-crew-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/* NAV STYLING */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 1.5rem;
+  margin-inline: 2.5rem;
+}
+
+.nav__logo {
+  width: 40px;
+  max-height: 40px;
+}
+
+.nav__links {
+  background: hsl(0 0 100% / 0.1);
+  backdrop-filter: blur(2rem);
+  list-style: none;
+  display: flex;
+  padding-block: 1.5rem;
+  padding-inline: clamp(3rem, 10vw, 10rem);
+  top: 0;
+  /* margin-right: -0.5rem; */
+  line-height: 30px;
+}
+
+.nav__link {
+  font-family: --;
+  text-decoration: none;
+  color: var(--color-light);
+
+  letter-spacing: var(--nav-spacing);
+  text-transform: uppercase;
+  font-size: var(--nav-l);
+  font-family: "Barlow Condensed", sans-serif;
+  margin-inline-end: 0.75em;
+}
+
+/* Underline animation */
+
+.nav__links {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  /* margin-right: 2rem; */
+}
+
+.nav__links:hover {
+  color: white;
+}
+
+.nav__links::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav__links:hover::before {
+  transform: scaleX(1);
+}
+
+.nav__link:hover {
+  filter: brightness(70%);
+}
+
+.nav__burger {
+  position: absolute;
+  height: 21px;
+  width: 24px;
+  right: 0;
+  top: 9px;
+  z-index: 9999;
+}
+
+.nav__link span {
+  font-weight: 700;
+  margin-inline-end: 0.75em;
+}
+
+.mobile__nav__toggle {
+  display: none;
+}
+
+@media (max-width: 35em) {
+  #moon {
+    order: 1;
+  }
+
+  #mars {
+    order: 2;
+  }
+
+  #europa {
+    order: 3;
+  }
+
+  #titan {
+    order: 4;
+  }
+
+  .nav__links {
+    position: fixed;
+    inset: 0 0 0 30%;
+    background: hsl(0 0 100% / 0.1);
+    backdrop-filter: blur(2rem);
+    flex-direction: column;
+    padding: min(20vh, 10rem) 2em;
+    gap: 2em;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+  .nav__links[data-visible="true"] {
+    transform: translateX(0%);
+  }
+  .mobile__nav__toggle {
+    display: block;
+    position: absolute;
+    border: 0;
+    height: 21px;
+    width: 24px;
+    right: 0;
+    top: 9px;
+    z-index: 9999;
+    background-image: url("/starter-code/assets/shared/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  .mobile__nav__toggle[aria-expanded="true"] {
+    background-image: url("/starter-code/assets/shared/icon-close.svg");
+  }
+}
+
+@media (min-width: 35em) {
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+  }
+}
+
+/* For Desktop */
+@media (min-width: 64em) {
+  .nav__link {
+    padding-right: 2rem;
+  }
+  .nav__links {
+    margin-right: 2rem;
+  }
+
+  .nav__logo:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 15px 15px rgba(255, 255, 255, 0.127);
+    transition: box-shadow 500ms ease-in-out;
+  }
+}
+
+/* Crew STYLES */
+
+.crew__wrapper {
+  text-align: center;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.crew__subheading {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  letter-spacing: 2.75px;
+}
+
+.crew__info__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 93%;
+}
+
+.crew__eyebrow {
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2.75px;
+  color: var(--color-light);
+  filter: brightness(50%);
+  margin-bottom: 0.5rem;
+}
+
+.crew__title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: default;
+  margin-bottom: 1rem;
+}
+
+.crew__info_text {
+  font-size: 0.95rem;
+  font-family: "Barlow Condensed", sans-serif;
+  color: var(--color-accent);
+  padding-bottom: 2rem;
+  margin-inline: 10px;
+  align-self: center;
+}
+
+.desktop__flex_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.desktop__flex_photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crew__photo__wrapper {
+  border-bottom: 3px solid #383b4b;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.crew__photo {
+  width: 170px;
+  height: 100%;
+  padding-top: 2rem;
+}
+
+.desktop__flex_text {
+  opacity: 0;
+  animation: fadeInAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.desktop__flex_photo {
+  opacity: 0;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.carousel__dots {
+  width: 100%;
+  height: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  filter: brightness(50%);
+}
+
+.active_dot {
+  filter: brightness(100%);
+}
+
+/* Mobile Crew */
+
+@media (max-width: 34.99em) {
+  .crew__photo {
+    order: 1;
+  }
+  .carousel__dots {
+    order: 2;
+  }
+
+  .crew__info__wrapper {
+    order: 3;
+  }
+}
+
+/* For  Tablet */
+@media (min-width: 35em) {
+  .crew__wrapper {
+    text-align: center;
+    margin: auto;
+  }
+
+  .crew_container {
+    background-image: url("/starter-code/assets/crew/background-crew-tablet.jpg");
+    background-size: cover;
+    padding-top: 8.5rem;
+  }
+
+  .crew__subheading {
+    align-self: flex-start;
+    margin-left: 3rem;
+    padding-bottom: 3.75rem;
+    font-size: 1.25rem;
+  }
+
+  .crew__eyebrow {
+    font-size: 1.5rem;
+  }
+
+  .crew__photo {
+    width: 300px;
+    height: auto;
+    padding-block: 3.5rem;
+    align-self: center;
+  }
+
+  .crew__title {
+    font-size: 5rem;
+  }
+
+  .crew__info_text {
+    font-size: 1.25rem;
+    width: 72%;
+    padding-bottom: 50px;
+  }
+
+  .active__link {
+    color: var(--color-light);
+    border-bottom-color: #ffffff;
+    cursor: default;
+  }
+
+  #moon {
+    top: 84px;
+    z-index: 999;
+  }
+
+  #mars {
+    top: 64px;
+    z-index: 999;
+  }
+
+  #europa {
+    top: 44px;
+    z-index: 999;
+  }
+
+  #titan {
+    top: 44px;
+    z-index: 999;
+  }
+}
+
+/* For Desktop */
+@media (min-width: 64em) {
+  .crew_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    gap: 200px;
+    border-top: rgba(255, 255, 255, 0.232) 1px solid;
+    border-bottom: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(255, 255, 255, 0.5760898109243697) 51%,
+        rgba(2, 0, 36, 1) 100%
+      )
+      2px solid;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url("/starter-code/assets/crew/background-crew-desktop.jpg");
+  }
+
+  .desktop__flex_photo {
+    /* margin-top: 97px; */
+  }
+
+  .desktop__flex_text {
+    align-items: start;
+    width: 445px;
+  }
+
+  .crew__photo {
+    width: 445px;
+    height: 100%;
+    max-width: none;
+  }
+
+  .crew__wrapper {
+    text-align: left;
+  }
+
+  .crew__info_text {
+    font-size: 1.5rem;
+    align-self: flex-start;
+    width: auto;
+  }
+
+  .crew__eyebrow {
+    font-size: 1.75rem;
+    letter-spacing: var(--heading-xs-spacing);
+  }
+
+  .crew__info__wrapper {
+    align-self: start;
+  }
+
+  .active__link {
+    color: var(--color-light);
+    border-bottom-color: #ffffff;
+    cursor: default;
+  }
+
+  main {
+    display: flex;
+    align-items: flex-end;
+  }
+}
