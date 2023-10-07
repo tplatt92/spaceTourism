@@ -133,7 +133,6 @@ nav {
 .nav__logo {
 	width: 40px;
 	max-height: 40px;
-	
 }
 
 .nav__links {
@@ -258,6 +257,11 @@ nav {
 	.nav__link {
 		padding-right: 2rem;
 	}
+	.nav__logo:hover {
+		border-radius: 50%;
+		box-shadow: 0 0 15px 15px rgba(255, 255, 255, 0.127);
+		transition: box-shadow 500ms ease-in-out;
+	}
 }
 
 /* HOME STYLES */
@@ -298,6 +302,7 @@ nav {
 	align-items: center;
 	margin: 0 auto;
 	margin-top: 5rem;
+	text-decoration: none;
 }
 
 .home__explore_btn {
@@ -306,6 +311,38 @@ nav {
 	font-size: 1.25rem;
 	text-transform: uppercase;
 	letter-spacing: 1.25px;
+	text-decoration: none;
+}
+
+.home__explore {
+	opacity: 0;
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade__wrapper {
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 /* For  Tablet */
@@ -336,6 +373,7 @@ nav {
 		margin-top: 9.75rem;
 		width: 242px;
 		height: 242px;
+		text-decoration: none;
 	}
 
 	.home__explore_btn {

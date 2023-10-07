@@ -1,35 +1,153 @@
+// Scroll Effects
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-gsap.set(".planet_container", { position: "absolute" });
+let mm = gsap.matchMedia();
 
-gsap.to(".planet_container", {
-	yPercent: 100,
-	stagger: -0.5,
-	scrollTrigger: {
-		trigger: document.body,
-		markers: true,
-		start: "top top",
-		end: "+=2000",
-		scrub: 1,
-		pin: true,
-		pinSpacing: true,
-		anticipatePin: 1,
-	},
+// Scroll effect on panels
+mm.add("(min-width: 35em)", () => {
+	gsap.set(".planet_container", { position: "absolute" });
+
+	gsap.to(
+		".home__wrapper > :nth-child(4), .home__wrapper > :nth-child(3), .home__wrapper > :nth-child(2)",
+		{
+			yPercent: 100,
+			stagger: -0.5,
+			scrollTrigger: {
+				trigger: document.body,
+				markers: false,
+				start: "top top",
+				end: "+=2000",
+				scrub: 1,
+				pin: true,
+				pinSpacing: true,
+				anticipatePin: 1,
+			},
+		}
+	);
 });
 
-// let tl = gsap.timeline();
-// tl.from("#moon", { yPercent: 0 })
-// 	.from("#mars", { yPercent: 600 })
-// 	.from("#europa", { yPercent: 600 })
-// 	.from("#titan", { yPercent: 600 });
+// Paralax effect on Text
 
-// ScrollTrigger.create({
-// 	animation: tl,
-// 	trigger: ".planet_container",
-// 	start: "-=0vh",
-// 	end: "+=800",
-// 	pin: true,
-// 	// pinSpacing: true,
-// 	// anticipatePin: 1,
-// 	scrub: 1,
-// });
+mm.add("(min-width: 35em)", () => {
+	// gsap.set(".desktop__flex_text", { position: "absolute" });
+
+	gsap.from("#moon", {
+		yPercent: -20,
+	});
+
+	gsap.from("#mars", {
+		yPercent: -40,
+		opacity: 0.8,
+	});
+
+	gsap.from("#europa", {
+		yPercent: -60,
+		opacity: 0.8,
+	});
+
+	gsap.from("#titan", {
+		yPercent: -80,
+		opacity: 0.8,
+	});
+
+	gsap.to(".home__title", {
+		yPercent: 10,
+		stagger: -0.5,
+
+		scrollTrigger: {
+			trigger: document.body,
+			markers: false,
+			start: "top top",
+			end: "+=2000",
+			scrub: 1,
+			pin: true,
+			pinSpacing: true,
+			anticipatePin: 1,
+		},
+	});
+
+	gsap.to(".home__photo", {
+		yPercent: 5,
+		stagger: -0.5,
+
+		scrollTrigger: {
+			trigger: document.body,
+			markers: false,
+			start: "top top",
+			end: "+=2000",
+			scrub: 1,
+			pin: true,
+			pinSpacing: true,
+			anticipatePin: 1,
+		},
+	});
+
+	gsap.to(".home__text", {
+		lines: 1,
+		yPercent: 10,
+		stagger: -0.5,
+		opacity: 0.7,
+		scrollTrigger: {
+			trigger: document.body,
+			markers: false,
+			start: "top top",
+			end: "+=2000",
+			scrub: 1,
+			pin: true,
+			pinSpacing: true,
+			anticipatePin: 1,
+		},
+	});
+
+	gsap.to(".home__links", {
+		yPercent: 10,
+		stagger: -0.5,
+		opacity: 0.7,
+		scrollTrigger: {
+			trigger: document.body,
+			markers: false,
+			start: "top top",
+			end: "+=2000",
+			scrub: 1,
+			pin: true,
+			pinSpacing: true,
+			anticipatePin: 1,
+		},
+	});
+});
+
+mm.add("(max-width: 62em)", () => {
+	gsap.set(".desktop__flex_text", {
+		yPercent: -20,
+	});
+
+	// gsap.from("#mars", {
+	// 	yPercent: -240,
+	// });
+
+	// gsap.from("#europa", {
+	// 	yPercent: -260,
+	// });
+
+	// gsap.from("#titan", {
+	// 	yPercent: -280,
+	// });
+});
+
+mm.add("(max-width: 35em)", () => {
+	gsap.set(".desktop__flex_text", {
+		yPercent: 0,
+	});
+
+	// gsap.from("#mars", {
+	// 	yPercent: -240,
+	// });
+
+	// gsap.from("#europa", {
+	// 	yPercent: -260,
+	// });
+
+	// gsap.from("#titan", {
+	// 	yPercent: -280,
+	// });
+});
