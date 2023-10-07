@@ -15,22 +15,34 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 // 	});
 // });
 
-let tl = gsap.timeline();
-tl.from("#moon", { yPercent: 0 })
-	.from("#mars", { yPercent: 600 })
-	.from("#europa", { yPercent: 600 })
-	.from("#titan", { yPercent: 600 });
+// let tl = gsap.timeline();
+// tl.from("#moon", { yPercent: 0 })
+// 	.from("#mars", { yPercent: 600 })
+// 	.from("#europa", { yPercent: 600 })
+// 	.from("#titan", { yPercent: 600 });
 
-ScrollTrigger.create({
-	animation: tl,
-	trigger: ".planet_container",
-	start: "top top",
-	end: "+=2000",
-	pin: true,
-	pinSpacing: true,
-	// anticipatePin: 1,
-	scrub: 1,
-});
+// // let nav = gsap.timeline();
+// // nav.from(".nav__wrapper", { yPercent: 0 });
+// // ScrollTrigger.create({
+// // 	animation: tl,
+// // 	trigger: ".planet_container",
+// // 	start: "-=vh",
+// // 	pin: true,
+// // 	// pinSpacing: true,
+// // 	// anticipatePin: 1,
+// // 	// scrub: 1,
+// // });
+
+// ScrollTrigger.create({
+// 	animation: tl,
+// 	trigger: ".planet_container",
+// 	start: "-=120vh",
+// 	end: "+=800",
+// 	pin: true,
+// 	pinSpacing: true,
+// 	// anticipatePin: 1,
+// 	scrub: 1,
+// });
 
 // gsap.timeline({
 // 	scrollTrigger: {
