@@ -546,6 +546,7 @@ nav {
 
 	.home__title {
 		font-size: 3.5rem;
+		white-space: nowrap;
 	}
 
 	.home__text {
@@ -555,5 +556,6 @@ nav {
 		margin-inline: 0;
 		line-height: 2.5rem;
 		justify-self: center;
+		margin-bottom: 0;
 	}
 }
