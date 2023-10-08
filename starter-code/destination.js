@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 let mm = gsap.matchMedia();
 
-// Scroll effect on panels
+// Scroll effect on destination panels
 mm.add("(min-width: 35em)", () => {
 	gsap.set(".planet_container", { position: "absolute" });
 
@@ -21,6 +21,7 @@ mm.add("(min-width: 35em)", () => {
 				pin: true,
 				pinSpacing: true,
 				anticipatePin: 1,
+				snap: 1,
 			},
 		}
 	);
@@ -98,6 +99,7 @@ mm.add("(min-width: 35em)", () => {
 			anticipatePin: 1,
 		},
 	});
+	
 
 	gsap.to(".home__links", {
 		yPercent: 10,
