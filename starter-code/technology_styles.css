@@ -484,12 +484,11 @@ nav {
 	.technology_container {
 		background-image: url("/starter-code/assets/technology/background-technology-tablet.jpg");
 		background-size: cover;
-		/* padding-top: 8.5rem; */
 		flex-grow: auto;
 		min-height: 100vh;
 		justify-content: flex-end;
 		border: none;
-		border-left: #383b4b 2px solid;
+
 		box-shadow: -26px 5px 29px 7px rgba(0, 0, 0, 0.1);
 	}
 
@@ -515,7 +514,6 @@ nav {
 
 	.technology__photo__wrapper {
 		border-bottom: none;
-
 		margin-bottom: 0;
 	}
 
@@ -529,68 +527,13 @@ nav {
 		padding-bottom: 40px;
 	}
 
-	/* .carousel__dots {
-		z-index: 998;
-	} */
-
-	/* #commander {
-		z-index: 1003;
+	.technology__photo_spaceport, .technology__photo_launchvehicle, .technology__photo_spacecapsule {
+		height: 19rem;
+		width: 100%;
 	}
-
-	#mission_specialist {
-		z-index: 1002;
-	}
-
-	#pilot {
-		z-index: 1001;
-	} */
-
-	.technology__photo_anousheh {
-		height: 40rem;
-		width: auto;
-	}
-
-	.technology__photo_mark {
-		height: 38rem;
-		width: auto;
-	}
-
-	.technology__photo_victor {
-		height: 38rem;
-		width: auto;
-	}
-
-	.technology__photo_doug {
-		height: 40rem;
-		width: auto;
-	}
-
-	/* .carousel__dots {
-		padding-bottom: calc();
-	} */
-
-	/* #moon {
-		top: 84px;
-		z-index: 999;
-	}
-
-	#mars {
-		top: 64px;
-		z-index: 999;
-	}
-
-	#europa {
-		top: 44px;
-		z-index: 999;
-	}
-
-	#titan {
-		top: 44px;
-		z-index: 999;
-	} */
 }
 
-@media (max-width: 34.98 em) and (min-width: 65em) {
+@media (max-width: 34.98em) and (min-width: 65em) {
 	.technology__subheading {
 		display: none;
 	}
