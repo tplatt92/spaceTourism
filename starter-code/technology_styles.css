@@ -110,9 +110,6 @@ body {
 	color: var(--color-light);
 	font-family: "Bellefair", serif;
 	position: relative;
-	/* overflow-x: hidden; */
-
-	/* overflow-y: scroll; */
 }
 
 .technology_container {
@@ -123,7 +120,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	background-image: url("/starter-code/assets/technology/background-technology-desktop.jpg");
-
 }
 @media (max-width: 64em) {
 	body {
@@ -232,22 +228,22 @@ nav {
 	display: none;
 }
 
-@media (max-width: 35em) {
-
-	main > :nth-child(4) {
-		order: 1;
+@media (max-width: 34.99em) {
+	main {
+		display: flex;
+		flex-direction: column;
 	}
 
-	main > :nth-child(3) {
-		order:2;
+	.tech main > :nth-child(1) {
+		order: 3;
 	}
 
 	main > :nth-child(2) {
-		order:3;
+		order: 2;
 	}
 
-	main > :nth-child(1) {
-		order: 4;
+	main > :nth-child(3) {
+		order: 1;
 	}
 
 	.nav__links {
@@ -324,14 +320,11 @@ nav {
 .technology__subheading {
 	text-transform: uppercase;
 	font-family: "Barlow Condensed", sans-serif;
+	text-align: center;
 	font-weight: 400;
-	font-size: 1rem;    
+	font-size: 1rem;
 	letter-spacing: 2.75px;
 }
-/* 
-.desktop__technology__subheading {
-	display: none;
-} */
 
 .technology__info__wrapper {
 	display: flex;
@@ -362,22 +355,10 @@ nav {
 	font-size: 0.95rem;
 	font-family: "Barlow Condensed", sans-serif;
 	color: var(--color-accent);
-    margin-inline: 1.25rem;
+	margin-inline: 1.25rem;
 	align-self: center;
-    padding-bottom: 5rem;
+	padding-bottom: 5rem;
 }
-
-/* .desktop__flex_text {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.desktop__flex_photo {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-} */
 
 .technology__photo__wrapper {
 	display: flex;
@@ -392,39 +373,6 @@ nav {
 	padding-top: 2rem;
 }
 
-/* .desktop__flex_text {
-	opacity: 0;
-	animation: fadeInAnimation ease 4s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-} */
-
-/* @keyframes fadeInAnimation {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-.desktop__flex_photo {
-	opacity: 0;
-	animation: fadeInAnimation ease 2s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-delay: 1s;
-}
-
-@keyframes fadeInAnimation {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-} */
-
 .carousel__dots {
 	width: 100%;
 	height: 50px;
@@ -437,9 +385,9 @@ nav {
 }
 
 .dot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -449,8 +397,8 @@ nav {
 
 .active_dot {
 	background-color: #ffffff;
-    color:#0b0d16;
-    filter: brightness(100%);
+	color: #0b0d16;
+	filter: brightness(100%);
 }
 
 .desktop__carousel__dots {
@@ -464,57 +412,60 @@ nav {
 /* Mobile technology */
 
 /* For  Tablet */
-@media (min-width: 35em) {
-	/* body {
-		overflow-y: scroll;
-	} */
+@media (min-width: 35.01em) {
 	.technology__wrapper {
 		text-align: center;
-		-ms-flex-align: start;
-		/* min-height: 100vh; */
-		/* margin: auto; */
-		justify-content: 0vh;
-		padding-bottom: 0;
-		/* position: absolute; */
-		max-height: 0vh;
-		height: 100vh;
-		z-index: 1000;
+		/* height: 100vh; */
+
+		/* -ms-flex-align: center;
+		justify-content: center; */
+		/* padding-bottom: 0; */
+		/* max-height: 0vh; */
+		/* height: 50%; */
+		/* z-index: 1000; */
+		/* overflow-y:hidden; */
 	}
 
 	.technology_container {
 		background-image: url("/starter-code/assets/technology/background-technology-tablet.jpg");
 		background-size: cover;
-		flex-grow: auto;
+		justify-content: flex-start;
 		min-height: 100vh;
-		justify-content: flex-end;
+		/* height: 120%;
+		/* flex-grow: auto; */
+		/* height: auto ; */
+		/* justify-content: center; */
 		border: none;
-
 		box-shadow: -26px 5px 29px 7px rgba(0, 0, 0, 0.1);
 	}
 
 	.technology__subheading {
+		text-align: left;
 		align-self: flex-start;
 		margin-left: 3rem;
-		top: 7rem;
+		/* top: 7rem; */
 		font-size: 1.25rem;
 		padding-bottom: 3.75rem;
+		padding-top: 8rem;
 	}
 
 	.technology__eyebrow {
 		font-size: 1.5rem;
-		margin-bottom: -0.5rem;
+		/* margin-bottom: -0.5rem; */
 	}
 
 	.technology__photo {
-		width: 457px;
-		height: auto;
+		size: 100%;
+		width: 768px;
+		height: 310px;
 		padding-top: 0;
-		justify-self: flex-end;
+		justify-self: center;
 	}
 
 	.technology__photo__wrapper {
 		border-bottom: none;
 		margin-bottom: 0;
+		padding-bottom: 2rem;
 	}
 
 	.technology__title {
@@ -524,20 +475,27 @@ nav {
 	.technology__info_text {
 		font-size: 1.25rem;
 		width: 73%;
-		padding-bottom: 40px;
+		padding-bottom: 5rem;
 	}
 
-	.technology__photo_spaceport, .technology__photo_launchvehicle, .technology__photo_spacecapsule {
-		height: 19rem;
+	.technology__photo_spaceport,
+	.technology__photo_launchvehicle,
+	.technology__photo_spacecapsule {
+		height: auto;
 		width: 100%;
 	}
+
+	/* .carousel__dots {
+		height: 30px;
+		width: 30px;
+	} */
 }
 
-@media (max-width: 34.98em) and (min-width: 65em) {
+/* @media (max-width: 34.98em) and (min-width: 65em) {
 	.technology__subheading {
 		display: none;
 	}
-}
+} */
 
 /* For Desktop */
 @media (min-width: 64em) {
@@ -554,10 +512,6 @@ nav {
 		background-repeat: no-repeat;
 	}
 
-	.desktop__flex_photo {
-		/* margin-top: 97px; */
-	}
-
 	.desktop__technology__subheading {
 		display: flex;
 		/* align-self: left; */
@@ -567,42 +521,6 @@ nav {
 		font-weight: 400;
 		font-size: 1.75rem;
 		letter-spacing: 2.75px;
-	}
-
-	.desktop__flex_text {
-		align-items: left;
-		width: 445px;
-	}
-
-	.desktop__carousel__dots {
-		width: 10rem;
-		height: 500px;
-		display: flex;
-		align-items: left;
-		/* justify-content: left; */
-		gap: 2rem;
-		padding-bottom: 5rem;
-	}
-
-	.dot {
-		width: 15px;
-		height: 15px;
-		border-radius: 50%;
-		background-color: white;
-		filter: brightness(50%);
-	}
-
-	.desktop__active_dot {
-		display: block;
-		filter: brightness(100%);
-	}
-
-	.carousel__dots {
-		display: none;
-	}
-
-	.active_dot {
-		display: none;
 	}
 
 	.technology__photo {
@@ -655,30 +573,5 @@ nav {
 		color: var(--color-light);
 		border-bottom-color: #ffffff;
 		cursor: default;
-	}
-
-	.technology__photo_anousheh {
-    height: 50rem;
-    width: fit-content;
-	}
-
-  .technology__photo_victor {
-		height: 50rem;
-    width: fit-content;
-	}
-}
-	/* .technology__photo_mark {
-		height: 0rem;
-		width: fit-content;
-	} */
-
-	/* .technology__photo_doug {
-		height: 50rem;
-		width: auto;
-	} */ 
-
-	/* main {
-		display: flex;
-		align-items: flex-end;
 	}
 }
