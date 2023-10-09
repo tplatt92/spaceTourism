@@ -31,7 +31,7 @@ mm.add("(min-width: 34.98em)", () => {
 
 mm.add("(min-width: 62em)", () => {
 	gsap.to(".crew__info__wrapper", {
-		xPercent: 10,
+		xPercent: 8,
 		stagger: -0.5,
 
 		scrollTrigger: {
@@ -47,7 +47,7 @@ mm.add("(min-width: 62em)", () => {
 	});
 
 	gsap.to(".crew__photo", {
-		xPercent: 5,
+		xPercent: 3,
 		stagger: -0.5,
 
 		scrollTrigger: {
