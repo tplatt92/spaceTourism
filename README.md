@@ -5,7 +5,7 @@
 - [Overview](#overview)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
+- [Our process](#Our-process)
   - [Built with](#built-with)
   - [What We learned](#what-i-learned)
   - [Continued development](#continued-development)
