@@ -13,9 +13,9 @@
 
 ## Overview
 
-This was a collaborative project between Tom Platt and Joe Walsh. As we both had a passion for space, we decided that we would love to build out a space website. The design was taken from a challenge on FrontEnd Mentor. We wanted to see if we could create a like for like design but with our own spin on the functionality and to elevate the static elements into something more interactive.
+This was a collaborative project between Tom Platt and Joe Walsh. As we both have a passion for space, we decided to build out a space website. The design was taken from a challenge on FrontEnd Mentor. We wanted to see if we could create a like for like design but with our own spin on the functionality and to elevate the static elements into something more interactive.
 
-Overall, we are incredibly happy with how it turned out, it has been challenging but incredibly rewarding and we have learnt so much.
+Overall, we are incredibly happy with how it turned out. It has been challenging but incredibly rewarding and we have learnt a great deal not only in how to develop a multi-page website, but also in how to work as a team and how to organise a larger scale project than we had tackled previously.
 
 ### Screenshot
 
@@ -27,10 +27,10 @@ Overall, we are incredibly happy with how it turned out, it has been challenging
 
 ## Our process
 
-- We employed pair programming, utilizing GitHub for seamless collaboration.
-- During the finalization, we meticulously tracked issues and used pull requests to refine our codebase.
+- We employed pair programming and utilised GitHub for seamless collaboration.
+- Towards the end of the project, we meticulously tracked issues and used pull requests to refine our codebase.
 - Our approach was methodical, perfecting one responsive page at a time.
-- Embracing a mobile-first mindset, we ensured a seamless user experience across all devices.
+- Embracing a mobile-first mindset, we ensured a seamless user experience and responsive design across all devices.
 
 ### Built with
 
@@ -43,12 +43,12 @@ Overall, we are incredibly happy with how it turned out, it has been challenging
 
 ### What we learned
 
-- Expanded knowledge of media queries and responsive design
-- Responsive navigation menus across multiple display formats
-- Use of custom CSS elements
-- Semantic HTML elements and aria labels
-- Use of different responsive scroll animations
-- The importance of prior planning when approaching structuring larger projects
+- Expanded knowledge of media queries and responsive design.
+- Responsive navigation menus across multiple display formats.
+- Use of custom CSS elements.
+- Semantic HTML elements and aria labels.
+- Use of different responsive scroll animations.
+- The importance of prior planning when approaching structuring larger projects.
 
 ### Continued development
 
