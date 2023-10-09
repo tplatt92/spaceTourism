@@ -13,7 +13,7 @@
 
 ## Overview
 
-This was a collaborative project between Tom Platt and Joe Walsh. As we both have a passion for space, we decided to build out a space website. The design was taken from a challenge on FrontEnd Mentor. We wanted to see if we could create a like for like design but with our own spin on the functionality and to elevate the static elements into something more interactive.
+This was a collaborative project between Tom Platt and Joe Walsh. As we both have a passion for space we decided to build out a space website. The design was taken from a challenge on FrontEnd Mentor. We wanted to see if we could create a like for like design but with our own spin on the functionality and to elevate the static elements into something more interactive.
 
 Overall, we are incredibly happy with how it turned out. It has been challenging but incredibly rewarding and we have learnt a great deal not only in how to develop a multi-page website, but also in how to work as a team and how to organise a larger scale project than we had tackled previously.
 
