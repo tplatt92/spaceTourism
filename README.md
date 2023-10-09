@@ -1,4 +1,4 @@
-# Space tourism Website
+# Space Tourism Website
 
 ## Table of contents
 
