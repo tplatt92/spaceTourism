@@ -19,7 +19,7 @@ Overall, we are incredibly happy with how it turned out, it has been challenging
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./assets/display-board.png)
 
 ### Links
 
