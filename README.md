@@ -23,7 +23,7 @@ Overall, we are incredibly happy with how it turned out. It has been challenging
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://space-tourism-portfolio.netlify.app/
 
 ## Our process
 
