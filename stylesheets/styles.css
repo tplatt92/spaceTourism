@@ -205,8 +205,7 @@ nav {
   .nav__links {
     position: fixed;
     inset: 0 0 0 30%;
-    background: hsl(0 0 100% / 0.1);
-    backdrop-filter: blur(2rem);
+    background: hsl(0 0 10% / 0.5);
     flex-direction: column;
     padding: min(20vh, 10rem) 2em;
     gap: 2em;
@@ -234,14 +233,16 @@ nav {
   .mobile__nav__toggle[aria-expanded="true"] {
     background-image: url("../assets/shared/icon-close.svg");
   }
-}
-
-@supports (backdrop-filter: blur(2rem)) {
+  
+  @supports (backdrop-filter: blur(2rem)) {
   .nav__links {
     background: hsl(0 0 100% / 0.1);
     backdrop-filter: blur(2rem);
   }
 }
+}
+
+
 
 /* For Desktop */
 @media (min-width: 64em) {
