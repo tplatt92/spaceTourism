@@ -52,7 +52,7 @@ mm.add("(min-width: 35em)", () => {
 	});
 
 	gsap.to(".home__title", {
-		yPercent: 10,
+		yPercent: 5,
 		stagger: -0.5,
 
 		scrollTrigger: {
@@ -68,7 +68,7 @@ mm.add("(min-width: 35em)", () => {
 	});
 
 	gsap.to(".home__photo", {
-		yPercent: 5,
+		yPercent: 3,
 		stagger: -0.5,
 
 		scrollTrigger: {
@@ -85,7 +85,7 @@ mm.add("(min-width: 35em)", () => {
 
 	gsap.to(".home__text", {
 		lines: 1,
-		yPercent: 10,
+		yPercent: 5,
 		stagger: -0.5,
 		opacity: 0.7,
 		scrollTrigger: {
@@ -99,10 +99,9 @@ mm.add("(min-width: 35em)", () => {
 			anticipatePin: 1,
 		},
 	});
-	
 
 	gsap.to(".home__links", {
-		yPercent: 10,
+		yPercent: 5,
 		stagger: -0.5,
 		opacity: 0.7,
 		scrollTrigger: {
@@ -122,34 +121,10 @@ mm.add("(max-width: 62em)", () => {
 	gsap.set(".desktop__flex_text", {
 		yPercent: -20,
 	});
-
-	// gsap.from("#mars", {
-	// 	yPercent: -240,
-	// });
-
-	// gsap.from("#europa", {
-	// 	yPercent: -260,
-	// });
-
-	// gsap.from("#titan", {
-	// 	yPercent: -280,
-	// });
 });
 
 mm.add("(max-width: 35em)", () => {
 	gsap.set(".desktop__flex_text", {
 		yPercent: 0,
 	});
-
-	// gsap.from("#mars", {
-	// 	yPercent: -240,
-	// });
-
-	// gsap.from("#europa", {
-	// 	yPercent: -260,
-	// });
-
-	// gsap.from("#titan", {
-	// 	yPercent: -280,
-	// });
 });

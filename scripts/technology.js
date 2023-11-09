@@ -28,7 +28,7 @@ mm.add("(min-width: 64em)", () => {
 	// gsap.set(".desktop__flex_text", { position: "absolute" });
 
 	gsap.to(".home__title", {
-		xPercent: 5,
+		xPercent: 2,
 		stagger: -0.5,
 
 		scrollTrigger: {
@@ -44,7 +44,7 @@ mm.add("(min-width: 64em)", () => {
 	});
 
 	gsap.to(".home__text", {
-		xPercent: 10,
+		xPercent: 5,
 		stagger: -0.5,
 
 		scrollTrigger: {
