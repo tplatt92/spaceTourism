@@ -136,8 +136,7 @@ nav {
 }
 
 .nav__links {
-  background: hsl(0 0 100% / 0.1);
-  backdrop-filter: blur(2rem);
+  background: hsl(0 0 0% / 0.75);
   list-style: none;
   display: flex;
   padding-block: 1.5rem;
@@ -147,11 +146,17 @@ nav {
   line-height: 30px;
 }
 
+  @supports (backdrop-filter: blur(2rem)) {
+  .nav__links {
+    background: hsl(0 0 100% / 0.1);
+    backdrop-filter: blur(2rem);
+  }
+}
+
 .nav__link {
   font-family: --;
   text-decoration: none;
   color: var(--color-light);
-
   letter-spacing: var(--nav-spacing);
   text-transform: uppercase;
   font-size: var(--nav-l);
@@ -205,7 +210,7 @@ nav {
   .nav__links {
     position: fixed;
     inset: 0 0 0 30%;
-    background: hsl(0 0 10% / 0.5);
+    background: hsl(0 0 0% / 0.75);
     flex-direction: column;
     padding: min(20vh, 10rem) 2em;
     gap: 2em;
