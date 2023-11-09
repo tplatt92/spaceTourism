@@ -236,6 +236,13 @@ nav {
   }
 }
 
+@supports (backdrop-filter: blur(2rem)) {
+  .nav__links {
+    background: hsl(0 0 100% / 0.1);
+    backdrop-filter: blur(2rem);
+  }
+}
+
 /* For Desktop */
 @media (min-width: 64em) {
   .nav__link {
